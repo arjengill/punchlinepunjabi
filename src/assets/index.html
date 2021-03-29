@@ -17,10 +17,24 @@
       href="/dist/images/PP black white 1 256x256.jpg"
       type="image/x-icon"
     />
+
     <title>Punjabi Music Magazine | Punchline Punjabi</title>
   </head>
 
   <body>
+    <div class="burger-menu-popup">
+      <div class="burger-menu-exit-button">X</div>
+
+      <div class="burger-menu-nav-link-container">
+        <a class="burger-menu-nav-link" href="/dist/features.html">Features</a>
+        <a class="burger-menu-nav-link" href="/dist/playlists.html"
+          >Playlists</a
+        >
+        <a class="burger-menu-nav-link" href="/dist/dictionary.html">Beats</a>
+        <a class="burger-menu-nav-link" href="/dist/about.html">About</a>
+      </div>
+    </div>
+
     <div id="page-container">
       <header id="header-nav">
         <div class="social-icons-wrapper-for-desktop">
@@ -35,37 +49,41 @@
                 src="/dist/svg icons/instagram white logo.svg"
                 alt="punchline punjabi instagram icon"
             /></a>
-            <a href="#"
+            <!--<a href="#"
               ><img
                 src="/dist/svg icons/twitter white logo.svg"
                 alt="punchline punjabi twitter icon"
-            /></a>
+            /></a>-->
             <a href="#"
               ><img
                 src="/dist/svg icons/youtube white logo.svg"
                 alt="punchline punjabi youtube icon"
             /></a>
-            <a href="#"
+            <!--<a href="#"
               ><img
                 src="/dist/svg icons/genius icon.svg"
                 alt="punchline punjabi genius icon"
-            /></a>
+            /></a>-->
           </div>
         </div>
 
         <div class="brand-script-logo">
-          <a href="punchlinepunjabi.com"
+          <a href="/dist/index.html"
             ><span>Punchline</span> <br />
             <span id="punjabi">Punjabi</span></a
           >
         </div>
 
         <div class="desktop-nav-menu-wrapper">
-          <a href="#"><span id="features">Features</span></a>
-          <a href="#"><span id="playlists">Playlists</span></a>
-          <a href="#"><span id="beats">Beats</span></a>
-          <a href="#"><span id="about">About</span></a>
+          <a href="/dist/features.html"><span id="features">Features</span></a>
+          <a href="/dist/playlists.html"
+            ><span id="playlists">Playlists</span></a
+          >
+          <a href="/dist/dictionary.html"><span id="beats">Dictionary</span></a>
+          <a href="/dist/about.html"><span id="about">About</span></a>
         </div>
+
+        <div class="burger-menu">Menu</div>
       </header>
 
       <!--slide-down nav bar-->
@@ -73,11 +91,19 @@
       <div id="navbar">
         <div class="navbar-content">
           <div class="slide-down-nav-link-container">
-            <a class="slide-down-nav-link" href="#Features">Features</a>
-            <a class="slide-down-nav-link" href="#Playlists">Playlists</a>
-            <a class="slide-down-nav-link" href="#Beats">Beats</a>
-            <a class="slide-down-nav-link" href="#About">About</a>
+            <a class="slide-down-nav-link" href="/dist/features.html"
+              >Features</a
+            >
+            <a class="slide-down-nav-link" href="/dist/playlists.html"
+              >Playlists</a
+            >
+            <a class="slide-down-nav-link" href="/dist/dictionary.html"
+              >Beats</a
+            >
+            <a class="slide-down-nav-link" href="/dist/about.html">About</a>
           </div>
+
+          <div class="slide-down-burger-menu">Menu</div>
 
           <div class="slide-down-nav-header">
             <a href="#">
@@ -93,42 +119,25 @@
                   src="/dist/svg icons/instagram white logo.svg"
                   alt="punchline punjabi instagram icon"
               /></a>
-              <a class="slide-down-social-icons" href="#"
+              <!--<a class="slide-down-social-icons" href="#"
                 ><img
                   src="/dist/svg icons/twitter white logo.svg"
                   alt="punchline punjabi twitter icon"
-              /></a>
+              /></a>-->
               <a class="slide-down-social-icons" href="#"
                 ><img
                   src="/dist/svg icons/youtube white logo.svg"
                   alt="punchline punjabi youtube icon"
               /></a>
-              <a class="slide-down-social-icons" href="#"
+              <!--<a class="slide-down-social-icons" href="#"
                 ><img
                   src="/dist/svg icons/genius icon.svg"
                   alt="punchline punjabi genius icon"
-              /></a>
+              /></a>-->
             </div>
           </div>
         </div>
       </div>
-
-      <script>
-        window.onscroll = function () {
-          scrollFunction();
-        };
-
-        function scrollFunction() {
-          if (
-            document.body.scrollTop > 170 ||
-            document.documentElement.scrollTop > 170
-          ) {
-            document.getElementById("navbar").style.top = "0px";
-          } else {
-            document.getElementById("navbar").style.top = "-50px";
-          }
-        }
-      </script>
 
       <!--hero section start-->
       <section>
@@ -182,67 +191,6 @@
             </div>
 
             <div id="prev" class="arrow"><</div>
-
-            <script>
-              var time = 5000;
-
-              let sliderImages = document.querySelectorAll(".slider"),
-                arrowLeft = document.querySelector("#prev"),
-                arrowRight = document.querySelector("#next"),
-                current = 0;
-
-              function reset() {
-                for (let i = 0; i < sliderImages.length; i++) {
-                  sliderImages[i].style.display = "none";
-                }
-              }
-
-              function startSlide() {
-                reset();
-                sliderImages[0].style.display = "block";
-              }
-
-              function slideLeft() {
-                reset();
-                sliderImages[current - 1].style.display = "block";
-                current--;
-              }
-
-              function slideRight() {
-                reset();
-                sliderImages[current + 1].style.display = "block";
-                current++;
-              }
-
-              setInterval(function(){
-
-                if (current === sliderImages.length - 1) {
-                  current = -1;
-                }
-
-                slideRight();
-              
-
-              }, 7000);
-
-              arrowRight.addEventListener("click", function () {
-                if (current === sliderImages.length - 1) {
-                  current = -1;
-                }
-
-                slideRight();
-              });
-
-              arrowLeft.addEventListener("click", function () {
-                if (current === 0) {
-                  current = sliderImages.length;
-                }
-
-                slideLeft();
-              });
-
-              startSlide();
-            </script>
           </div>
 
           <!--hero slider container end-->
@@ -256,98 +204,100 @@
             <h2 id="main-section-heading-h2">Latest Music Content</h2>
           </div>
 
-          <div class="cms-wrapper">
-            <!--cms item-->
+          <div class="grid-wrap">
+            <div class="cms-wrapper">
+              <!--cms item-->
 
-            <div class="cms-item-container">
-              <div class="cms-card-image image1"></div>
+              <div class="cms-item-container">
+                <div class="cms-card-image image1"></div>
 
-              <div class="cms-text-block">
-                <h3 class="cms-text-block-header">
-                  AP Dhillon X Gurinder Gill: 'Arrogant' Punjabi and English
-                  Lyrics
-                </h3>
+                <div class="cms-text-block">
+                  <h3 class="cms-text-block-header">
+                    AP Dhillon X Gurinder Gill: 'Arrogant' Punjabi and English
+                    Lyrics
+                  </h3>
 
-                <p class="cms-paragraph">
-                  Punjabi-to-English lyrics translation of AP Dhillon X Gurinder
-                  Gill's 'Arrogant', with producer Gmnxr.
-                </p>
+                  <p class="cms-paragraph">
+                    Punjabi-to-English lyrics translation of AP Dhillon X
+                    Gurinder Gill's 'Arrogant', with producer Gmnxr.
+                  </p>
 
-                <div class="category-subcat-wrapper">
-                  <div class="cms-category">Features</div>
+                  <div class="category-subcat-wrapper">
+                    <div class="cms-category">Features</div>
 
-                  <div class="cms-sub-category">Lyrics</div>
+                    <div class="cms-sub-category">Lyrics</div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!--cms item-->
+              <!--cms item-->
 
-            <div class="cms-item-container">
-              <div class="cms-card-image image2"></div>
+              <div class="cms-item-container">
+                <div class="cms-card-image image2"></div>
 
-              <div class="cms-text-block">
-                <h3 class="cms-text-block-header">
-                  AP Dhillon X Gurinder Gill: 'Droptop' Lyrics English
-                  Translation
-                </h3>
+                <div class="cms-text-block">
+                  <h3 class="cms-text-block-header">
+                    AP Dhillon X Gurinder Gill: 'Droptop' Lyrics English
+                    Translation
+                  </h3>
 
-                <p class="cms-paragraph">
-                  Punjabi-to-English lyrics translation of AP Dhillon X Gurinder
-                  Gill's 'Droptop', a song for convertible-cruising..
-                </p>
+                  <p class="cms-paragraph">
+                    Punjabi-to-English lyrics translation of AP Dhillon X
+                    Gurinder Gill's 'Droptop', a song for convertible-cruising..
+                  </p>
 
-                <div class="category-subcat-wrapper">
-                  <div class="cms-category">Features</div>
+                  <div class="category-subcat-wrapper">
+                    <div class="cms-category">Features</div>
 
-                  <div class="cms-sub-category">Lyrics</div>
+                    <div class="cms-sub-category">Lyrics</div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!--cms item-->
+              <!--cms item-->
 
-            <div class="cms-item-container">
-              <div class="cms-card-image image3"></div>
+              <div class="cms-item-container">
+                <div class="cms-card-image image3"></div>
 
-              <div class="cms-text-block">
-                <h3 class="cms-text-block-header">
-                  Prabh Deep: 'Chitta' Punjabi and English Lyrics
-                </h3>
+                <div class="cms-text-block">
+                  <h3 class="cms-text-block-header">
+                    Prabh Deep: 'Chitta' Punjabi and English Lyrics
+                  </h3>
 
-                <p class="cms-paragraph">
-                  Punjabi-to-English lyrics translation of AP Dhillon X Gurinder
-                  Gill's 'Arrogant', with producer Gmnxr. This is a song about
-                  staying away from the influence of cocaine.
-                </p>
+                  <p class="cms-paragraph">
+                    Punjabi-to-English lyrics translation of AP Dhillon X
+                    Gurinder Gill's 'Arrogant', with producer Gmnxr. This is a
+                    song about staying away from the influence of cocaine.
+                  </p>
 
-                <div class="category-subcat-wrapper">
-                  <div class="cms-category">Features</div>
+                  <div class="category-subcat-wrapper">
+                    <div class="cms-category">Features</div>
 
-                  <div class="cms-sub-category">Lyrics</div>
+                    <div class="cms-sub-category">Lyrics</div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!--cms item-->
+              <!--cms item-->
 
-            <div class="cms-item-container">
-              <div class="cms-card-image image4"></div>
+              <div class="cms-item-container">
+                <div class="cms-card-image image4"></div>
 
-              <div class="cms-text-block">
-                <h3 class="cms-text-block-header">
-                  Sidhu Moose Wala: '47', the Choice of God or Gun
-                </h3>
+                <div class="cms-text-block">
+                  <h3 class="cms-text-block-header">
+                    Sidhu Moose Wala: '47', the Choice of God or Gun
+                  </h3>
 
-                <p class="cms-paragraph">
-                  Review of Sidhu Moose Wala's discography, comparing his lyrics
-                  to gangster rapper Tupac.
-                </p>
+                  <p class="cms-paragraph">
+                    Review of Sidhu Moose Wala's discography, comparing his
+                    lyrics to gangster rapper Tupac.
+                  </p>
 
-                <div class="category-subcat-wrapper">
-                  <div class="cms-category">Features</div>
+                  <div class="category-subcat-wrapper">
+                    <div class="cms-category">Features</div>
 
-                  <div class="cms-sub-category">Lyrics</div>
+                    <div class="cms-sub-category">Lyrics</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -384,4 +334,7 @@
       </section>
     </div>
   </body>
+  <footer>
+    <script type="text/javascript" src="/dist/js/all.js"></script>
+  </footer>
 </html>

@@ -1,5 +1,5 @@
 // Start line number: 632
-// End line number: 
+// End line number:
 
 * {
   font-family: "Montserrat", sans-serif;
@@ -8,11 +8,22 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+$orange: #ff7300;
+$pink: #ff0167;
+$salmon: #ff6d6d;
+$black: #000;
+$white: #fff;
+
+::selection {
+  background: $black;
+  color: $orange;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap");
 
 @font-face {
   font-family: Loki;
-  src: url('/dist/fonts/Loki-Regular.ttf') format ("ttf");
+  src: url("/dist/fonts/Loki-Regular.ttf") format ("ttf");
 }
 
 #page-container {
@@ -23,7 +34,7 @@
   height: auto;
   position: relative;
   overflow-x: hidden;
-  background-color: #ff6d6d;
+  background-color: $salmon;
 }
 
 // Header
@@ -45,19 +56,16 @@ header {
 .social-icons-wrapper-for-desktop {
   align-self: center;
   justify-self: center;
-  width: 250px;
-  height: 30px;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  height: auto;
+  padding: 1px 2px;
   font-size: 18px;
   grid-column: 1 / 2;
-  background-color: black;
-  color: white;
+  background-color: $black;
+  color: $white;
   font-weight: 300;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-auto-rows: auto;
-  grid-gap: 6px;
   align-items: center;
   justify-items: stretch;
 }
@@ -73,7 +81,7 @@ header {
 
 .brand-script-logo a {
   text-decoration: none;
-  color: black;
+  color: $black;
 }
 
 .brand-script-logo {
@@ -89,7 +97,7 @@ header {
 
 .desktop-nav-menu-wrapper {
   width: auto;
-  background-color: black;
+  background-color: $black;
   list-style: none;
   text-decoration: none;
   font-size: 18px;
@@ -99,7 +107,7 @@ header {
 }
 
 .desktop-nav-menu-wrapper a {
-  color: white;
+  color: $white;
   text-decoration: none;
 }
 
@@ -123,19 +131,18 @@ header {
 // Hero section container
 
 .hero-section-div-block {
-    position: relative;
-    height: 800px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 2fr;
-    align-items: stretch;
-    justify-items: stretch;
-    overflow-x: hidden;
-    column-span: 4;
-    row-span: 1;
-    background-color: black;
-  }
-  
+  position: relative;
+  height: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 2fr;
+  align-items: stretch;
+  justify-items: stretch;
+  overflow-x: hidden;
+  column-span: 4;
+  row-span: 1;
+  background-color: $black;
+}
 
 // Marquee
 
@@ -168,7 +175,7 @@ header {
   justify-self: center;
   width: 400px;
   height: 25px;
-  color: #ff7300;
+  color: $orange;
 
   animation-name: marquee-vertical-container-1;
   animation-duration: 18s;
@@ -180,12 +187,12 @@ header {
   margin: 0 auto;
   position: absolute;
   margin-top: 24px;
-  color: #ff7300;
+  color: $orange;
   align-self: center;
   justify-self: center;
   height: 25px;
   font-size: 21px;
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 300;
   font-style: italic;
 
@@ -199,11 +206,11 @@ header {
 #marquee-text-2 {
   margin: 0 auto;
   position: relative;
-  color: #ff7300;
+  color: $orange;
   align-self: center;
   justify-self: center;
   font-size: 21px;
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
@@ -211,11 +218,11 @@ header {
 #marquee-h1 {
   margin: 0 auto;
   position: relative;
-  color: #ff7300;
+  color: $orange;
   align-self: center;
   justify-self: center;
   font-size: 21px;
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
@@ -294,11 +301,12 @@ header {
 
 .hero-slider-container {
   margin-top: 26px;
-  background-color: black;
+  background-color: $black;
   z-index: 1;
   height: auto;
   width: auto;
   position: relative;
+  text-align: center;
 }
 
 #prev,
@@ -310,7 +318,7 @@ header {
   padding: 16px;
   margin: 0 auto;
   top: 50%;
-  color: white;
+  color: $white;
 }
 
 #next {
@@ -351,9 +359,9 @@ header {
 }
 
 .post-header-slider {
-  background-color: black;
+  background-color: $black;
   position: absolute;
-  color: #ff7300;
+  color: $orange;
   font-family: "Loki";
   font-weight: 400;
   font-size: 32px;
@@ -370,7 +378,7 @@ header {
 }
 
 .dot {
-  background-color: white;
+  background-color: $white;
   z-index: 300;
   height: 30px;
   width: 30px;
@@ -379,20 +387,19 @@ header {
 .main-container {
   width: 100%;
   height: auto;
-  background-color: #ff6d6d;
+  background-color: $salmon;
 }
 
-// Slide-down nav bar 
+// Slide-down nav bar
 
 #navbar {
   height: auto;
-  top: -5vh;
   transition: top 0.3s;
   position: fixed;
   z-index: 400;
   width: 100%;
-  background-color: black;
-  color: white;
+  background-color: $black;
+  color: $white;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -414,7 +421,7 @@ header {
 
 .slide-down-nav-link {
   margin-right: 5px;
-  color: white;
+  color: $white;
   text-decoration: none;
   font-weight: 300;
   align-self: center;
@@ -435,7 +442,7 @@ header {
 
 .slide-down-nav-header a {
   text-decoration: none;
-  color: white;
+  color: $white;
 }
 
 .slide-down-nav-header:hover {
@@ -469,27 +476,32 @@ header {
 }
 
 #main-section-heading-h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-family: "Jost";
+  font-weight: 400;
+  font-style: italic;
   font-size: 34px;
 }
 
-
 // Content cards
+
+.grid-wrap {
+  display: flex;
+  justify-content: center;
+}
 
 .cms-wrapper {
   margin-top: 25px;
-  width: 100%;
+  width: auto;
   display: grid;
+  grid-gap: 30px;
   align-items: center;
   justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr) !important;
   grid-template-rows: auto;
 }
 
 .cms-item-container {
   transition: all 0.2s ease;
-  grid-row: 1/2;
 }
 
 .cms-item-container:hover {
@@ -501,7 +513,7 @@ header {
 .cms-card-image {
   width: 300px;
   height: 200px;
-  background-color: black;
+  background-color: $black;
   background-size: cover;
   background-position-x: 50%;
   background-position-y: 50%;
@@ -527,7 +539,8 @@ header {
   position: relative;
   height: 220px;
   width: 300px;
-  background-color: black;
+  background-color: $black;
+  border-top: $pink 1px solid;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
@@ -535,8 +548,8 @@ header {
 }
 
 .cms-text-block-header {
-  font-family: 'Jost', sans-serif;
-  color: #ff7300;
+  font-family: "Jost", sans-serif;
+  color: $orange;
   font-style: italic;
   font-weight: 500;
   font-size: 20px;
@@ -547,7 +560,7 @@ header {
 .cms-paragraph {
   padding-top: 10px;
   font-family: "Montserrat", sans-serif;
-  color: white;
+  color: $white;
   font-weight: 300;
   text-align: center;
 }
@@ -555,7 +568,7 @@ header {
 .category-subcat-wrapper {
   position: absolute;
   bottom: 0px;
-  border: 1px white;
+  border: 1px $white;
   width: 140px;
   height: 20px;
   align-self: center;
@@ -566,16 +579,16 @@ header {
 }
 
 .cms-category {
-  background-color: black;
-  color: white;
+  background-color: $black;
+  color: $white;
   width: 70px;
   height: 20px;
   text-align: center;
-  border: 1px solid white;
+  border: 1px solid $white;
 }
 
 .cms-sub-category {
-  background-color: white;
+  background-color: $white;
   width: 70px;
   height: 20px;
   text-align: center;
@@ -587,6 +600,7 @@ header {
   display: flex;
   justify-content: center;
   align-content: center;
+  text-align: center;
   margin-top: 20px;
   font-size: 20px;
 }
@@ -606,19 +620,19 @@ header {
   margin-left: 50%;
   transform: translateX(-50%);
   margin-top: 10px;
-  color: white;
-  background-color: black;
+  color: $white;
+  background-color: $black;
   margin-bottom: 10px;
 }
 
 #form-text-input::placeholder {
-  color: white;
+  color: $white;
   text-align: center;
   font-weight: 200;
   opacity: 0.9;
 }
 
-// Footer 
+// Footer
 
 .footer-div-block {
   display: flex;
@@ -626,9 +640,9 @@ header {
   align-content: center;
   justify-content: center;
   height: 100px;
-  background-color: black;
+  background-color: $black;
   font-size: 12px;
-  color: white;
+  color: $white;
   font-weight: 300;
 }
 
@@ -639,9 +653,214 @@ header {
 
 .privacy-div-block a {
   text-decoration: none;
-  color: white;
+  color: $white;
 }
 
 .privacy-div-block {
   margin-top: 10px;
+}
+
+.post-img-container {
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  height: 600px;
+
+  .post-img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.post-h1 {
+  font-family: "Loki";
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $orange;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.post-h2 {
+  font-family: "Jost";
+  font-weight: 500;
+  color: $orange;
+}
+
+.post-video {
+  display: flex;
+  justify-content: center;
+}
+
+.post-content-container {
+  background-color: $black;
+  display: flex;
+  justify-content: center;
+
+  #tte {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 20px;
+
+    .post-h2 {
+      font-family: "Jost";
+      font-weight: 400;
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 20px;
+      color: $orange;
+    }
+
+    .lyrics-og::before {
+      content: "";
+      height: 20px;
+      width: 3px;
+      background-color: $white;
+      position: absolute;
+      display: block;
+      left: 15px;
+    }
+
+    .lyrics-og {
+      color: $white;
+      padding-left: 10px;
+    }
+
+    .post-content {
+    }
+
+    p {
+      font-weight: 300;
+    }
+  }
+}
+
+.cat-content-container {
+  @extend .post-content-container;
+
+  #tte {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 24vw;
+
+    .cat-h1 {
+      @extend .post-h1;
+    }
+    .cat-content {
+      font-weight: 300;
+      color: $white;
+      $white-space: pre-line;
+    }
+  }
+}
+
+.burger-menu-exit-button,
+.burger-menu-popup,
+.slide-down-burger-menu,
+.burger-menu {
+  display: none;
+}
+
+.slide-down-burger-menu {
+  display: none;
+  height: auto;
+  background-color: $black;
+  color: $white;
+  justify-self: center;
+  cursor: pointer;
+}
+
+// Media Queries
+
+@media (max-width: 1300px) {
+  .cms-wrapper {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 990px) {
+  .cms-wrapper {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .desktop-nav-menu-wrapper {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+    height: auto;
+    background-color: $black;
+    color: $white;
+    justify-self: center;
+    cursor: pointer;
+  }
+
+  .connect-with-us-div-block {
+    display: none;
+  }
+
+  .social-icons-wrapper-for-desktop {
+    width: auto;
+    padding-top: 0;
+  }
+
+  .burger-menu-popup {
+    width: 100vw;
+    color: $white;
+    background-color: $black;
+    z-index: 999;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    .burger-menu-exit-button {
+      border: $white 1px solid;
+      border-radius: 10px;
+      text-align: center;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .burger-menu-nav-link-container {
+      display: none;
+
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+
+      a:hover {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .slide-down-nav-link-container {
+    display: none;
+  }
+
+  .slide-down-burger-menu {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+
+  .slide-down-burger-menu {
+    justify-self: flex-end;
+  }
+}
+
+@media (max-width: 630px) {
+  .cms-wrapper {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }

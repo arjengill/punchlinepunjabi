@@ -45,6 +45,7 @@ function jsTask() {
       .pipe(sourcemaps.write('.'))
       .pipe(dest('dist/js'));
   }
+
   
   function cssTask() {
     return src(cssPath)
