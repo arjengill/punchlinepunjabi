@@ -1,0 +1,28 @@
+.footer-div-block {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 100px;
+    background-color: $black;
+    font-size: 12px;
+    color: $white;
+    font-weight: 300;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .copyright-and-email {
+    align-self: center;
+    text-align: center;
+  }
+  
+  .privacy-div-block a {
+    text-decoration: none;
+    color: $white;
+  }
+  
+  .privacy-div-block {
+    margin-top: 10px;
+  }

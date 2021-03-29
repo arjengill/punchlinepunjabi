@@ -17,11 +17,6 @@
   color: #ff7300;
 }
 
-@font-face {
-  font-family: Loki;
-  src: url("/dist/fonts/Loki-Regular.ttf") format "ttf";
-}
-
 #page-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,6 +35,11 @@
   overflow-x: hidden;
   background-color: #ff6d6d;
   padding-bottom: 100px;
+}
+
+@font-face {
+  font-family: Loki;
+  src: url("/dist/fonts/Loki-Regular.ttf") format "ttf";
 }
 
 header {

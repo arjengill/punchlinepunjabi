@@ -1,0 +1,75 @@
+.post-img-container {
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    height: 600px;
+  
+    .post-img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .post-h1 {
+    font-family: "Loki";
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $orange;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .post-h2 {
+    font-family: "Jost";
+    font-weight: 500;
+    color: $orange;
+  }
+  
+  .post-video {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .post-content-container {
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+  
+    #tte {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      padding: 20px 20px;
+  
+      .post-h2 {
+        font-family: "Jost";
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 20px;
+        color: $orange;
+      }
+  
+      .lyrics-og::before {
+        content: "";
+        height: 20px;
+        width: 3px;
+        background-color: $white;
+        position: absolute;
+        display: block;
+        left: 15px;
+      }
+  
+      .lyrics-og {
+        color: $white;
+        padding-left: 10px;
+      }
+  
+      p {
+        font-weight: 300;
+      }
+    }
+  }

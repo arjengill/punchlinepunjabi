@@ -1,0 +1,13 @@
+.hero-section-div-block {
+    position: relative;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr;
+    align-items: stretch;
+    justify-items: stretch;
+    overflow-x: hidden;
+    column-span: 4;
+    row-span: 1;
+    background-color: $black;
+  }

@@ -1,0 +1,35 @@
+.newsletter-form-signup {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 50px 0px;
+    font-size: 20px;
+  }
+  
+  .newsletter-form-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  #form-text-input {
+    border: none;
+    width: 300px;
+    height: 23px;
+    justify-self: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    color: $white;
+    background-color: $black;
+    margin-bottom: 10px;
+  }
+  
+  #form-text-input::placeholder {
+    color: $white;
+    text-align: center;
+    font-weight: 200;
+    opacity: 0.9;
+  }
