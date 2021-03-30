@@ -21,6 +21,11 @@
     grid-template-columns: repeat(3, 1fr) !important;
   }
 }
+@media (max-width: 1200px) {
+  #tte {
+    padding: 20px 15vw;
+  }
+}
 
 @media (max-width: 990px) {
   .cat-content {
