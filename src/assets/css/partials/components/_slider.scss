@@ -61,9 +61,7 @@
     background-color: $black;
     position: absolute;
     color: $orange;
-    font-family: "Loki";
-    font-weight: 400;
-    font-size: 32px;
+    @include fonts(Loki, $light, 3.2rem);
     text-transform: uppercase;
     top: 20px;
     align-self: center;

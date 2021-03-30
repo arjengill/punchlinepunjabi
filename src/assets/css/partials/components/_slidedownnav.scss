@@ -1,0 +1,79 @@
+#navbar {
+  height: auto;
+  transition: top 0.3s;
+  position: fixed;
+  z-index: 400;
+  width: 100%;
+  background-color: $black;
+  color: $white;
+  font-size: 1.6rem;
+}
+
+.navbar-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.slide-down-nav-link-container {
+  width: 100%;
+
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+.slide-down-nav-link {
+  margin-right: 5px;
+  color: $white;
+  text-decoration: none;
+  font-weight: 300;
+  align-self: center;
+}
+
+.slide-down-nav-header {
+  width: auto;
+  font-style: italic;
+  font-size: 1.2rem;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  text-decoration: none;
+}
+
+.slide-down-nav-header a {
+  text-decoration: none;
+  color: $white;
+}
+
+#slide-down-nav-punchline-punjabi {
+  font-weight: 300;
+}
+
+.slide-down-nav-social-icons-container {
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+}
+
+.slide-down-social-links {
+  align-self: center;
+}
+
+.slide-down-social-icons {
+  margin: 2px;
+}
+
+.main-section-heading {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+#main-section-heading-h2 {
+  @include fonts(Jost, $regular, 3.4rem);
+  font-style: italic;
+}

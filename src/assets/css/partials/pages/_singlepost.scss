@@ -1,0 +1,67 @@
+.post-img-container {
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  height: 600px;
+}
+
+.post-h1 {
+  @include fonts(Loki, $light, 3rem);
+  text-transform: uppercase;
+  color: $orange;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.post-video {
+  display: flex;
+  justify-content: center;
+}
+
+.post-content-container {
+  background-color: $black;
+  display: flex;
+  justify-content: center;
+
+  p {
+    @include fonts(Montserrat, $light, 1.8rem);
+  }
+}
+
+.lyrics-og {
+  color: $white;
+  padding-left: 10px;
+}
+
+.lyrics-og::before {
+  content: "";
+  height: 20px;
+  width: 3px;
+  background-color: $white;
+  position: absolute;
+  display: block;
+  left: 15px;
+}
+
+.post-h2 {
+  @include fonts(Jost, $regular, 2.2rem);
+  color: $orange;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 20px;
+  color: $orange;
+}
+
+.post-img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+#tte {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}

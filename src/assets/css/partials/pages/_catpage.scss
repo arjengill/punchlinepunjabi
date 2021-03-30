@@ -1,0 +1,23 @@
+.cat-content-container {
+  @extend .post-content-container;
+}
+
+.cat-h1 {
+  @extend .post-h1;
+  font-size: 3.8rem;
+}
+
+.cat-content {
+  font-weight: 300;
+  font-size: 2rem;
+  color: $white;
+  white-space: pre-line;
+}
+
+#tte {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 20px 15vw;
+}

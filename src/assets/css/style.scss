@@ -1,73 +1,27 @@
-// Variables
-$orange: #ff7300;
-$pink: #ff0167;
-$salmon: #ff6d6d;
-$black: #000;
-$white: #fff;
+/*autoprefixer: off*/
+/*Base*/
 
-// Universal style-rules
-* {
-  font-family: "Montserrat", sans-serif;
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
+@import "partials/base/variables";
+@import "partials/base/mixins";
+@import "partials/base/reset";
+@import "partials/base/typography";
 
-::selection {
-  background: $black;
-  color: $orange;
-}
+/*Components*/
 
-#page-container {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-items: center;
-  height: auto;
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-  background-color: $salmon;
-  padding-bottom: 100px;
-}
+@import "partials/components/herocontainer";
+@import "partials/components/marquee";
+@import "partials/components/slider";
+@import "partials/components/slidedownnav";
+@import "partials/components/cmscard";
+@import "partials/components/newsletter";
 
-// Fonts
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap");
+/*Pages*/
 
-@font-face {
-  font-family: Loki;
-  src: url("/dist/fonts/Loki-Regular.ttf") format ("ttf");
-}
+@import "partials/pages/singlepost";
+@import "partials/pages/catpage";
 
-// Header
-@import "partials/header";
+/*Layout*/
 
-// Hero section container
-@import "partials/herocontainer";
-
-// Marquee
-@import "partials/marquee";
-
-// Slider
-@import "partials/slider";
-
-// Slide-down nav bar
-@import "partials/slidedownnav";
-
-// Content cards
-@import "partials/cmscard";
-
-// Newsletter
-@import "partials/newsletter";
-
-// Footer
-@import "partials/footer";
-
-// Single post
-@import "partials/singlepost";
-
-// Category page
-@import "partials/catpage";
-
-// Tablet & Mobile style-rules
-@import "partials/tabletmobile";
+@import "partials/layout/header";
+@import "partials/layout/footer";
+@import "partials/layout/tabletmobile";
