@@ -1,0 +1,10 @@
+.main-section-heading {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  
+  #main-section-heading-h2 {
+    @include fonts(Jost, $regular, 3.4rem);
+    font-style: italic;
+  }
