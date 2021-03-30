@@ -1,3 +1,5 @@
+// Marquee
+
 @mixin marqueeKF($val) {
   @if $val == marquee-container-1 {
     animation-name: marquee-vertical-container-1;
@@ -13,6 +15,13 @@
     animation-timing-function: linear;
     animation-delay: 1s;
   }
+}
+
+// Fonts
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: ($size / 16px) * 1rem;
 }
 
 @mixin fonts($font, $weight, $size) {
