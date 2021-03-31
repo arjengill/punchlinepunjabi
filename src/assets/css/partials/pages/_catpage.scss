@@ -1,5 +1,6 @@
 .cat-content-container {
   @extend .post-content-container;
+  flex-direction: column;
 }
 
 .cat-h1 {

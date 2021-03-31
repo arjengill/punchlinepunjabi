@@ -1,7 +1,5 @@
 //Homepage JS
 
-/* Slider */
-
 if (window.location.href.match(/index|\/(?!.)/g)) {
   let sliderImages = document.querySelectorAll(".slider"),
     arrowLeft = document.querySelector("#prev"),

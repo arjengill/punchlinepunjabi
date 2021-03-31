@@ -30,7 +30,9 @@
         <a class="burger-menu-nav-link" href="/dist/playlists.html"
           >Playlists</a
         >
-        <a class="burger-menu-nav-link" href="/dist/dictionary.html">Dictionary</a>
+        <a class="burger-menu-nav-link" href="/dist/dictionary.html"
+          >Dictionary</a
+        >
         <a class="burger-menu-nav-link" href="/dist/about.html">About</a>
       </div>
     </div>
@@ -49,7 +51,9 @@
             <a class="slide-down-nav-link hover" href="/dist/dictionary.html"
               >Dictionary</a
             >
-            <a class="slide-down-nav-link hover" href="/dist/about.html">About</a>
+            <a class="slide-down-nav-link hover" href="/dist/about.html"
+              >About</a
+            >
           </div>
 
           <div class="slide-down-burger-menu">Menu</div>
@@ -95,11 +99,41 @@
           <p class="cat-content">
             We're developing an app that'll allow you to translate any Punjabi Roman Script word (Punjabi words that're spelled with the alphabet) into their English meanings. This app seeks to give you a closer connection to any Punjabi song you're interested in learning about, and will be completely accessible for anyone that doesn't know Punjabi Roman Script or Punjabi.
 
-Work in progress. Subscribe to the newsletter for updates on the project, and contact us if you'd like to contribute.
+            Try typing 'jaikara' into the search box below and click the word once the suggestion box appears.
           </p>
-        </div>
-      </div>
 
+
+          <div class="definition-box-container">
+            <div id="definition-box">
+              <h1 id="definition-box-heading">Meaning</h1>
+            </div>
+          </div>
+          <div class="search-box-container">
+            <!--<div class="information-box-container">
+      <div id="information-box">
+        Try entering 'jaikara' and then click the word once the suggestion box
+        appears
+      </div>
+      <div class="information">
+        <span>i</span>
+      </div>
+    </div> -->
+            <div id="form-container">
+              <input
+                id="search-input"
+                type="text"
+                name="myPunjabiWords"
+                placeholder="Spell the Punjabi word using the alphabet"
+              />
+  
+              <div id="suggestions"></div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+        
       <section>
         <div class="main-container">
           <div class="main-section-heading">
@@ -236,5 +270,8 @@ Work in progress. Subscribe to the newsletter for updates on the project, and co
       </section>
     </div>
   </body>
-  <footer><script type="text/javascript" src="/dist/js/all.js"></script></footer>
+  <footer>
+    <script type="text/javascript" src="/dist/js/all.js"></script>
+    <script type="text/javascript" src="/dist/js/lyrics.js"></script>
+  </footer>
 </html>

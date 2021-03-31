@@ -1,4 +1,5 @@
 /*autoprefixer: off*/
+
 /*Base*/
 
 @import "partials/base/variables";
@@ -14,6 +15,7 @@
 @import "partials/components/slidedownnav";
 @import "partials/components/cmscard";
 @import "partials/components/newsletter";
+@import "partials/components/_lyricsdictionary.scss";
 
 /*Pages*/
 

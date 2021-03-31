@@ -461,6 +461,113 @@ html {
   opacity: 0.9;
 }
 
+.search-box-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+  margin-bottom: 30px;
+}
+
+#form-container {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+}
+
+#search-input {
+  background: transparent;
+  height: 30px;
+  width: 100%;
+  border: grey solid 1px;
+  text-align: center;
+  color: white;
+}
+
+#search-input::placeholder {
+  color: white;
+  font-weight: 200;
+  opacity: 70%;
+}
+
+#search-input:focus::placeholder {
+  color: transparent;
+}
+
+#suggestions {
+  display: none;
+  font-weight: 200;
+  border: 1px grey solid;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+#suggestions.display-suggestions-panel {
+  display: block;
+}
+
+#suggestions div {
+  border-top: 1px grey solid;
+}
+
+.definition-box-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#definition-box {
+  display: none;
+}
+
+#definition-box.definition-box-display {
+  display: block;
+  padding-top: 10px;
+  height: 300px;
+  width: 500px;
+  border: 0.5px grey solid;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 200;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #ff7300;
+}
+
+.spanName:hover {
+  font-weight: 400;
+  color: #ff7300;
+}
+
+/*.information-box-container {
+  margin-left: 10px;
+
+}
+
+.information {
+  height: 15px;
+  width: 15px;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  border: 1px grey solid;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#information-box {
+  display: none;
+}
+
+#information-box.display-information-box {
+  display: block;
+  height: auto;
+  width: 20%;
+  border: 1px grey solid;
+  color: white;
+  @include fonts(Montserrat, $light, 1.2rem);
+  padding: 5px;
+}*/
 /*Pages*/
 .post-img-container {
   display: flex;
@@ -534,6 +641,10 @@ html {
   justify-content: center;
   flex-direction: column;
   position: relative;
+}
+
+.cat-content-container {
+  flex-direction: column;
 }
 
 .cat-h1 {

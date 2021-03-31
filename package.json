@@ -24,7 +24,6 @@
     "node-sass": "^5.0.0"
   },
   "dependencies": {
-    "browserlist": "^1.0.1",
     "postcss": "^8.2.8"
   },
   "browserslist": [

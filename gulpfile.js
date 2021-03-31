@@ -9,7 +9,8 @@ const sourcemaps = require("gulp-sourcemaps");
 const svgmin = require("gulp-svgmin");
 const { src, series, parallel, dest, watch } = require("gulp");
 
-const jsPath = "src/assets/js/**/*.js";
+const jsPath = "src/assets/js/*.js";
+const jsPathLyrics = "src/assets/js/lyricsdictionary/*.js";
 const cssPath = "src/assets/css/**/*.css";
 const htmlPath = "src/assets/*.html";
 
@@ -42,11 +43,18 @@ function jsTask() {
     .pipe(dest("dist/js"));
 }
 
+function dictionaryJS() {
+  return src(jsPathLyrics)
+    .pipe(concat("lyrics.js"))
+    .pipe(terser())
+    .pipe(dest("dist/js"));
+}
+
 function cssTask() {
   return src(cssPath)
     .pipe(sourcemaps.init())
     .pipe(concat("style.css"))
-    .pipe(postcss([autoprefixer({grid:false}), cssnano()]))
+    .pipe(postcss([autoprefixer({ grid: false }), cssnano()]))
     .pipe(sourcemaps.write("."))
     .pipe(dest("dist/css"));
 }
@@ -68,6 +76,7 @@ exports.default = parallel(
   copyHtml,
   imgTask,
   jsTask,
+  dictionaryJS,
   cssTask,
   svgTask,
   fontTask
