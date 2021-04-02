@@ -204,15 +204,15 @@ html {
 }
 
 .slide1 {
-  background-image: url("dist/images/47.jpg");
+  background-image: url("/dist/images/47.jpg");
 }
 
 .slide2 {
-  background-image: url("dist/images/droptop.JPG");
+  background-image: url("/dist/images/droptop.JPG");
 }
 
 .slide3 {
-  background-image: url("dist/images/prabhdeepchitta.jpg");
+  background-image: url("/dist/images/prabhdeepchitta.jpg");
 }
 
 .slide-content {
