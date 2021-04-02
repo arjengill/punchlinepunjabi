@@ -1,22 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/dist/css/style.css" type=text/css>
-    <link
-      rel="icon"
-      href="/dist/images/PP black white 1 256x256.jpg"
-      type="image/x-icon"
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/dist/css/style.css" type="text/css" media="print" onload="this.media='all'">
+    <link rel="icon" href="/dist/images/PP black white 1 256x256.jpg" type="image/x-icon">
+    <meta property="og:url" content="https://www.punchlinepunjabi.com"/>
+    <link rel="canonical" href="https://www.punchlinepunjabi.com"/>
+    <script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Punchline Punjabi",
+    "url": "https://www.punchlinepunjabi.com",
+    "headline": "Apna magazine for punchline Punjabi music",
+    "description": "A Punjabi music magazine exploring songs through the lens of hip hop, and highlighting the punchlines of our culture through stories, reviews, and playlists.",
+    "image": {
+    	"@type": "ImageObject",
+      "url": "https://uploads-ssl.webflow.com/5ea0850543b1d8571a0bf91e/5eca7c179359c2669e3ff74f_punchlinepunjabihomepage.jpg"
+    },
+    "genre": "Punjabi Music"
+  
+    }
+    </script>
+    <script>
+
+      /* Creating and populating canonical tag. */
+      
+      // First part of the logic below is redundant now as for demo purposes there's no need to specify a canonical tag other than this website. On the live website, I needed to be able to dynamically set the canonical tag as some content was syndicated with domains such as BritAsia TV and BizAsia. 
+      // In the second part of the logic, the current URL is being dynamically injected to populate our canonical tag.
+      
+      const curl = "";
+      const currentURL = window.location.href.match(/.*/g).toString();
+      if (curl != "") {
+        link=document.createElement('link');
+        link.href= "";
+        link.rel='canonical';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      } else if (curl == "") {
+        link=document.createElement('link');
+          link.rel='canonical';
+          link.href= currentURL;
+          document.getElementsByTagName('head')[0].appendChild(link);
+      }
+      
+      </script>
+    <meta name="twitter:site" content="@punchlinepunjabi">
+    <meta name="twitter:title" content="Punchline Punjabi">
+    <meta name="twitter:description" content="A Punjabi music magazine exploring songs through the lens of hip hop, and highlighting the punchlines of our culture through stories, reviews, and playlists.">
+    <meta name="twitter:image" content="https://uploads-ssl.webflow.com/5ea0850543b1d8571a0bf91e/5eca7c179359c2669e3ff74f_punchlinepunjabihomepage.jpg">
+    <meta name="twitter:image:alt" content="Punchline Punjabi Thumbnail">
+    <meta name="twitter:card" content="summary">
 
     <title>Punjabi Music Magazine | Punchline Punjabi</title>
   </head>
@@ -340,6 +376,62 @@
         </div>
       </div>
     </div>
+
+    <script>
+      (function(){
+          'use strict';
+      
+          var supportPicture = !!window.HTMLPictureElement;
+      
+          addEventListener('lazybeforeunveil', function(e){
+              if(e.defaultPrevented || e.target.getAttribute('data-noscript') == null){return;}
+              var imgs, i;
+              var noScript = e.target.getElementsByTagName('noscript')[0] || {};
+              var content = noScript.textContent || noScript.innerText || '';
+              e.target.innerHTML = content;
+      
+              if(supportPicture){return;}
+      
+              imgs = e.target.querySelectorAll('img[srcset], picture > img');
+      
+              for(i = 0; i < imgs.length; i++){
+                  lazySizes.uP(imgs[i]);
+              }
+          });
+      })();
+      </script>
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js"></script>
+      
+      <script>
+      $(document).ready(function() {
+      
+        window.lazySizesConfig = window.lazySizesConfig || {};
+        window.lazySizesConfig.init = false;
+      
+        $('.lazyload').each(function() {
+          $(this).attr('data-src', $(this).attr('src'));
+          $(this).removeAttr('src');
+          $(this).attr('data-srcset', $(this).attr('srcset'));
+          $(this).removeAttr('srcset');
+          $(this).removeAttr('sizes');
+          $(this).attr('data-sizes', 'auto');
+      
+          lazySizes.init();
+        });
+      
+      });
+      </script>
+  
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&amp;display=swap" rel="stylesheet"></noscript>
+
+  
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&amp;display=swap" rel="stylesheet"></noscript>
+
+  
+  <noscript><link rel="stylesheet" href="/dist/css/style.css" type="text/css"></noscript>
+
   </body>
   <footer>
     <script type="text/javascript" src="/dist/js/all.js"></script>
