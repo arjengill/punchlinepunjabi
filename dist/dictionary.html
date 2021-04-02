@@ -19,6 +19,28 @@
     />
 
     <title>Punjabi Music Magazine | Punchline Punjabi</title>
+    <script>
+
+      /* Creating and populating canonical tag. */
+      
+      // First part of the logic below is redundant now as for demo purposes there's no need to specify a canonical tag other than this website. On the live website, I needed to be able to dynamically set the canonical tag as some content was syndicated with domains such as BritAsia TV and BizAsia. 
+      // In the second part of the logic, the current URL is being dynamically injected to populate our canonical tag.
+      
+      const curl = "";
+      const currentURL = window.location.href.match(/.*/g).toString();
+      if (curl != "") {
+        link=document.createElement('link');
+        link.href= "";
+        link.rel='canonical';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      } else if (curl == "") {
+        link=document.createElement('link');
+          link.rel='canonical';
+          link.href= currentURL;
+          document.getElementsByTagName('head')[0].appendChild(link);
+      }
+      
+      </script>
   </head>
 
   <body>

@@ -24,6 +24,7 @@
     "node-sass": "^5.0.0"
   },
   "dependencies": {
+    "gulp-cli": "^2.3.0",
     "postcss": "^8.2.8"
   },
   "browserslist": [
@@ -39,5 +40,4 @@
     "android >= 4",
     "bb >= 10"
   ]
-
 }
