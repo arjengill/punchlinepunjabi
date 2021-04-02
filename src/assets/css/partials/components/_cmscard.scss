@@ -34,10 +34,10 @@
 }
 
 $imgUrls: (
-  image1: "/dist/images/arrogant.jpg",
-  image2: "/dist/images/droptop.JPG",
-  image3: "/dist/images/prabhdeepchitta.jpg",
-  image4: "/dist/images/47.jpg",
+  image1: "dist/images/arrogant.jpg",
+  image2: "dist/images/droptop.JPG",
+  image3: "dist/images/prabhdeepchitta.jpg",
+  image4: "dist/images/47.jpg",
 );
 
 @each $key, $url in $imgUrls {
