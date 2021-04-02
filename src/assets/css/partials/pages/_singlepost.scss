@@ -32,6 +32,7 @@
 .lyrics-og {
   color: $white;
   padding-left: 10px;
+  position: relative;
 }
 
 .lyrics-og::before {
@@ -41,7 +42,7 @@
   background-color: $white;
   position: absolute;
   display: block;
-  left: 15px;
+  left: -5px;
 }
 
 .post-h2 {
