@@ -19,6 +19,29 @@
     />
 
     <title>Punjabi Music Magazine | Punchline Punjabi</title>
+    <script>
+
+      /* Creating and populating canonical tag. */
+      
+      // First part of the logic below is redundant now as for demo purposes there's no need to specify a canonical tag other than this website. On the live website, I needed to be able to dynamically set the canonical tag as some content was syndicated with domains such as BritAsia TV and BizAsia. 
+      // In the second part of the logic, the current URL is being dynamically injected to populate our canonical tag.
+      
+      const curl = "";
+      const currentURL = window.location.href.match(/.*/g).toString();
+      if (curl != "") {
+        link=document.createElement('link');
+        link.href= "";
+        link.rel='canonical';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      } else if (curl == "") {
+        link=document.createElement('link');
+          link.rel='canonical';
+          link.href= currentURL;
+          document.getElementsByTagName('head')[0].appendChild(link);
+      }
+      
+      </script>
+
   </head>
 
   <body>
@@ -250,5 +273,52 @@
   </body>
   <footer>
     <script type="text/javascript" src="/dist/js/all.js"></script>
+
+
+    <script> 
+    /*Dynamically injecting Schema content*/
+
+// A different configuration was needed compared to the one I used on Webflow CMS (which allowed the use of variables to populate Schema content). Since JSON is static, it is not possible to inject variables; for this reason, the Schema has been built within JavaScript, and then injected into our JSON. 
+
+      const schHeadline = document.querySelector('h1.post-h1').innerText;
+      const schImg = document.querySelector('img.post-img');
+
+      var schemaOrg = {
+        "@context": "http://schema.org", 
+       "@type": "BlogPosting",
+       "headline": schHeadline,
+       "image": schImg, 
+       "genre": "Punjabi",  
+       "mainEntityOfPage": {
+           "@type": "WebPage",
+              "@id": "https://www.punchlinepunjabi.com/posts/"
+       },
+       "publisher": {
+           "@type": "Organization",
+              "name": "Punchline Punjabi",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://uploads-ssl.webflow.com/5ea0850543b1d8571a0bf91e/5edd4fb371405385d1b525c9_google%20shcema%20publisher%20logo.jpg"
+                  }
+       },
+       "url": "",
+       "datePublished": "",
+       "dateCreated": "",
+       "dateModified": "",
+       "description": "",
+       "articleBody": "",
+       "articleSection": "",
+         "author": {
+          "@type": "Person",
+          "name": "Arjen Gill"
+        
+      }};
+
+      var script = document.createElement('script');
+        script.type = "application/ld+json";
+        script.text = JSON.stringify(schemaOrg);
+        document.getElementsByTagName('head')[0].appendChild(script);
+    
+      </script>
   </footer>
 </html>
