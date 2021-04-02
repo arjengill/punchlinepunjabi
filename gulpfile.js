@@ -15,7 +15,7 @@ const cssPath = "src/assets/css/**/*.css";
 const htmlPath = "src/assets/*.html";
 
 function copyHtml() {
-  return src("src/assets/*.html").pipe(gulp.dest("dist"));
+  return src("src/assets/*.html").pipe(gulp.dest("./"));
 }
 
 function imgTask() {
