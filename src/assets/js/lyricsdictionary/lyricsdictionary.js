@@ -1,3 +1,5 @@
+if (window.location.href.match(/dictionary/g)) {
+
 var punjabiWords = [
   //A
   { name: "anti", value: "antagonist" },
@@ -132,7 +134,7 @@ document.addEventListener("click", function (informationHover) {
     informationBox.classList.remove("display-information-box");
   }
 });
-
+}
 /*document.addEventListener("mouseout", function (informationExit) {
   if (informationExit.target.classList == "information") {
     informationBox.classList.remove("display-information-box");

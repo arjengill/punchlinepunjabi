@@ -79,7 +79,7 @@ if (window.location.href.match(/index|\/(?!.)/g)) {
 
 // Universal JS
 
-function burgerBoiMenu() {
+function burgerMenu() {
   var burgPopup = document.querySelector(".burger-menu-popup");
   var extBtn = document.querySelector(".burger-menu-exit-button");
   var pgContainer = document.querySelector("#page-container");
@@ -105,4 +105,4 @@ function burgerBoiMenu() {
     });
   });
 }
-burgerBoiMenu();
+burgerMenu();
