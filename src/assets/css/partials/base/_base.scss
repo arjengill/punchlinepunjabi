@@ -4,15 +4,16 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+
 body {
   @include fonts(Montserrat, $light, 1.6rem);
 }
 
 #page-container {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-items: center;
   height: auto;
   min-height: 100vh;
   position: relative;
