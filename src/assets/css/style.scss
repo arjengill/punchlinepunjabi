@@ -1,11 +1,14 @@
 /*autoprefixer: off*/
 
-/*Base*/
+/*Abstracts*/
 
-@import "partials/base/variables";
-@import "partials/base/mixins";
+@import "partials/abstracts/variables";
+@import "partials/abstracts/mixins";
+@import "partials/abstracts/fonts";
+
+/* Base */
+
 @import "partials/base/base";
-@import "partials/base/fonts";
 
 /*Components*/
 
