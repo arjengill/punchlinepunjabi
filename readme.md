@@ -8,3 +8,7 @@ https://arjengill.github.io/punjabimusicwebsite/
 
 
 ![Punchline Punjabi snapshot](https://uploads-ssl.webflow.com/5ea0850543b1d8571a0bf91e/5eca7c179359c2669e3ff74f_punchlinepunjabihomepage.jpg)
+
+Using GULP and manual optimisations, I was able to score a 99 Lighthouse score on mobile (100 on desktop).
+
+
