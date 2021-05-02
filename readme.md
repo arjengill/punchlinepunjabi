@@ -11,4 +11,4 @@ https://arjengill.github.io/punjabimusicwebsite/
 
 Using GULP and manual optimisations, I was able to score a 99 Lighthouse score on mobile (100 on desktop).
 
-![Punchline Punjabi 99 PSI Score](/dist/images/punjabimusicwebsite99psi)
+![Punchline Punjabi 99 PSI Score](/dist/images/punjabimusicwebsite99psi.png)
